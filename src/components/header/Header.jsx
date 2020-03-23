@@ -1,28 +1,29 @@
 import React from "react";
+import s from './header.module.css';
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className={s.header}>
             <div className="container">
-                <div className="header-content">
-                    <div className="l-block">
-                        <div className="logo">
+                <div className={s.headerContent}>
+                    <div className={s.leftBlock}>
+                        <div className={s.logo}>
                             logo
                         </div>
-                        <div className="search">
+                        <div className={s.search}>
                             search
                         </div>
                     </div>
 
-                    <div className="r-block">
-                        <div className="nav">
+                    <div className={s.rightBlock}>
+                        <div className={s.nav}>
                             home
                             profile
                             message
                             posts
                             music
                         </div>
-                        <div className="auth-block">
+                        <div className={s.authBlock}>
                             NameProfile
                         </div>
                     </div>

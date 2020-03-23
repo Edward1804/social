@@ -1,15 +1,16 @@
 import React from "react";
+import s from "./leftColumn.module.css"
 
 const LeftColumnProfile = () => {
     return (
-        <div className="lelt-column">
+        <div className={s.leltColumn}>
             <div>
                 ava
             </div>
             <div>
                 small description
             </div>
-            <div className="social_links">
+            <div className={s.socialLink}>
                 <div>
                     link1
                 </div>

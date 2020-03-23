@@ -23,34 +23,9 @@ body
   margin: auto
   height: 100%
 
-.l-block
-  display: inline-block
-  margin: auto 0
-
-  .logo
-    display: inline-block
-
-    margin-right: 10px
-  .search
-    display: inline-block
 
 
-
-.r-block
-  margin: auto 0
-  display: inline-block
-
-  .nav
-    display: inline-block
-    margin-right: 10px
-  .auth-block
-    display: inline-block
-
-
-
-
-
-.wrapper-main
+.wrapperMain
   display: grid
 
   grid-template-areas: "l-col content r-col"
@@ -59,29 +34,8 @@ body
   grid-gap: 30px
 
 
-.lelt-column
-  grid-area: l-col
-  background-color: #fff
-
-.content
-  grid-area: content
-  background-color: #fff
 
 
 
 
 
-.right-column
-  grid-area: r-col
-  .portfolio
-    background-color: #fff
-    padding: 10px
-    .items
-      padding-top: 10px
-      display: grid
-      grid-template-rows: 1fr 1fr 1fr 1fr
-      grid-template-columns: 1fr 1fr 1fr
-      .item
-        img
-          width: 50px
-          height: 50px
