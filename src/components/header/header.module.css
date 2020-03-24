@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  background-color: #0099CC;
+  height: 45px;
+  margin-bottom: 70px;
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 100%;
+}
+
+.leftBlock {
+  display: inline-block;
+  margin: auto 0;
+}
+.leftBlock .logo {
+  display: inline-block;
+  margin-right: 10px;
+}
+.leftBlock .search {
+  display: inline-block;
+}
+
+.rightBlock {
+  margin: auto 0;
+  display: inline-block;
+}
+
+.nav {
+  display: inline-block;
+  margin-right: 10px;
+}
+.nav a {
+  margin-left: 5px;
+  color: white;
+  text-decoration: none;
+}
+.nav a.activeLink {
+  color: gold;
+}
+
+.authBlock {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=header.module.css.map */
