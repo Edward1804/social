@@ -5,13 +5,13 @@ import ContentProfile from "./content/Content";
 
 const Profile = () => {
     return (
-        <div className="container">
-            <div className="wrapperMain">
-                <LeftColumnProfile/>
-                <ContentProfile/>
-                <RightColumnProfile />
-            </div>
+        // <div className="container">
+        <div className="wrapperMain">
+            <LeftColumnProfile/>
+            <ContentProfile/>
+            <RightColumnProfile/>
         </div>
+        // </div>
     )
 };
 

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"messages.module.css"}
+{"version":3,"sourceRoot":"","sources":["messages.module.sass"],"names":[],"mappings":"AAAA;EACE;EACA;EAEA;;;AAEF;EACE;EACA;EACA;;;AAMF;EACE;EACA;EACA;;;AAIA;EACE;EACA;;AACA;EACE;EACA;EACA;EACA;EACA;;AACA;EACE;;AAEN;EACE","file":"messages.module.css"}

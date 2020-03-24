@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   background-color: #0099CC;
-  height: 45px;
+  height: 100%;
   margin-bottom: 70px;
 }
 
@@ -19,7 +19,10 @@
 }
 .leftBlock .logo {
   display: inline-block;
-  margin-right: 10px;
+  margin: 5px;
+}
+.leftBlock .logo img {
+  width: 50px;
 }
 .leftBlock .search {
   display: inline-block;

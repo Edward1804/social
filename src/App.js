@@ -1,22 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './styles/style.css';
-import Footer from "./Footer";
 import Header from "./components/header/Header";
 import Profile from "./components/profile/Profile";
+import Messages from "./components/messages/Messages";
+import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
     return (
-        <div className="app-wrapper">
+        <BrowserRouter>
+            <div className="app-wrapper">
 
-            <Header />
-            <Profile/>
+                <Header/>
+                <div className="container">
+                    <Route path='/messages' component={Messages}/>
+                    <Route path='/profile' component={Profile}/>
+                </div>
 
-
-
-
-        </div>
-    );
+            </div>
+        </BrowserRouter>
+    )
+        ;
 }
 
 export default App;
