@@ -38,16 +38,32 @@
   margin-right: 10px;
 }
 .nav a {
-  margin-left: 5px;
   color: white;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0 30px;
 }
-.nav a.activeLink {
-  color: gold;
+.nav a .icon {
+  color: white;
+  height: 20px;
+}
+.nav a .describe {
+  font-size: 13px;
 }
 
 .authBlock {
   display: inline-block;
+}
+
+.search {
+  position: relative;
+}
+.search .searchBar {
+  position: absolute;
+  min-width: 290px;
+  top: -47px;
+  left: 10px;
 }
 
 /*# sourceMappingURL=header.module.css.map */

@@ -2,23 +2,24 @@ import React from 'react';
 
 import './styles/style.css';
 import Header from "./components/header/Header";
-import Profile from "./components/profile/Profile";
 import Messages from "./components/messages/Messages";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
+import ProfilePage from "./components/profile/ProfilePage";
 
-function App() {
+
+
+function App(props) {
     return (
-        <BrowserRouter>
             <div className="app-wrapper">
-
                 <Header/>
                 <div className="container">
-                    <Route path='/messages' component={Messages}/>
-                    <Route path='/profile' component={Profile}/>
+                    <Route path='/messages' render={ () => <Messages data={props.state.messagePage} dialogs={props.dialogs}/>}/>
+
+                    <Route path='/profile' render={ () => <ProfilePage data={props.state.profilePage} /> }/>
                 </div>
 
             </div>
-        </BrowserRouter>
+
     )
         ;
 }

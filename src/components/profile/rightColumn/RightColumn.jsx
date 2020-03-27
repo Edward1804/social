@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./rightColumn.module.css"
+import s from "./profile.module.css"
 
 
 const RightColumnProfile = () => {

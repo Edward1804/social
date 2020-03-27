@@ -2,7 +2,33 @@ import React from "react";
 import s from "./messages.module.css"
 import {NavLink} from "react-router-dom";
 
-const Messages = () => {
+const MsgUser = (props) => {
+
+    let path = "/messages/" + props.id;
+    return (
+        <div className={s.msgUser}>
+            <NavLink to={path} activeClassName={s.active}>{props.name}</NavLink>
+        </div>
+    )
+};
+
+const MsgItem = (props) => {
+    return (
+        <div className={s.item}>
+            {props.message}
+        </div>
+    )
+};
+
+
+
+
+
+const Messages = (props) => {
+
+    let messagesElements = props.data.messages.map(m => <MsgItem message={m.message} />);
+    let listMessageElements = props.data.dialogs.map(u => <MsgUser name={u.name} id={u.id} />);
+
     return (
         <div className={s.dialogs}>
             <div className={s.msgList}>
@@ -10,22 +36,7 @@ const Messages = () => {
                     Messages
                 </div>
                 <div className={s.messagesList + " " + "whiteBlock"}>
-                    <div className={s.msgUser}>
-                        <NavLink to="/messages/1" activeClassName={s.active}>Dima</NavLink>
-                    </div>
-                    <div className={s.msgUser}>
-                        <NavLink to="/messages/2" activeClassName={s.active}>Edward</NavLink>
-                    </div>
-                    <div className={s.msgUser}>
-                        <NavLink to="/messages/3" activeClassName={s.active}>Nikita</NavLink>
-                    </div>
-                    <div className={s.msgUser}>
-                        <NavLink to="/messages/4" activeClassName={s.active}>Roma</NavLink>
-                    </div>
-                    <div className={s.msgUser}>
-                        <NavLink to="/messages/5" activeClassName={s.active}>Dima</NavLink>
-                    </div>
-
+                    {listMessageElements}
                 </div>
             </div>
             <div className={s.messages}>
@@ -33,16 +44,7 @@ const Messages = () => {
                     Nikita
                 </div>
                 <div className={s.msgItems + " " + "whiteBlock"}>
-                    <div className={s.item}>
-                        hi!
-                    </div>
-                    <div className={s.item}>
-                        what's up?
-                    </div>
-
-                    <div className={s.item}>
-                        Hey!
-                    </div>
+                    {messagesElements}
                 </div>
             </div>
         </div>

@@ -28,7 +28,8 @@
   display: block;
 }
 .messagesList .msgUser a.active {
-  color: gold;
+  background-color: #efefef;
+  border-left: 1px solid #e4e4e4;
 }
 .messagesList .msgUser:last-child {
   border-bottom: none;
