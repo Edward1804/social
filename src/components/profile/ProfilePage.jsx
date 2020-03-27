@@ -8,7 +8,7 @@ const ProfilePage = (props) => {
         // <div className="container">
         <div className="wrapperMain">
             <LeftColumnProfile />
-            <ContentProfile posts={props.data.posts}/>
+            <ContentProfile data={props.data} dispatch={props.dispatch}/>
             <RightColumnProfile />
         </div>
         // </div>

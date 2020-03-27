@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createRef} from "react";
 import s from "./messages.module.css"
 import {NavLink} from "react-router-dom";
 
@@ -29,6 +29,20 @@ const Messages = (props) => {
     let messagesElements = props.data.messages.map(m => <MsgItem message={m.message} />);
     let listMessageElements = props.data.dialogs.map(u => <MsgUser name={u.name} id={u.id} />);
 
+    let newMessageElement = createRef();
+
+    let sendMessage = () => {
+
+        let text = newMessageElement.current.value;
+        props.dispatch({type: "ADD_MESSAGE", newMessage: text});
+        // props.addMessage(text);
+    };
+
+    let updateText = () => {
+        let text = newMessageElement.current.value;
+        props.dispatch({type: "UPDATE_MESSAGE_TEXT", newMessage: text});
+    };
+
     return (
         <div className={s.dialogs}>
             <div className={s.msgList}>
@@ -45,6 +59,10 @@ const Messages = (props) => {
                 </div>
                 <div className={s.msgItems + " " + "whiteBlock"}>
                     {messagesElements}
+                </div>
+                <div className={s.sendMessage + " " + "whiteBlock"}>
+                    <textarea onChange={updateText} value={props.data.messageText} ref={newMessageElement} name="add_posts" id=""></textarea>
+                    <button onClick={sendMessage}>SEND</button>
                 </div>
             </div>
         </div>

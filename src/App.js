@@ -13,15 +13,14 @@ function App(props) {
             <div className="app-wrapper">
                 <Header/>
                 <div className="container">
-                    <Route path='/messages' render={ () => <Messages data={props.state.messagePage} dialogs={props.dialogs}/>}/>
+                    <Route path='/messages' render={ () => <Messages data={props.state.messagePage} dispatch={props.dispatch}/>}/>
 
-                    <Route path='/profile' render={ () => <ProfilePage data={props.state.profilePage} /> }/>
+                    <Route path='/profile' render={ () => <ProfilePage data={props.state.profilePage} dispatch={props.dispatch}/> }/>
                 </div>
 
             </div>
 
-    )
-        ;
+    );
 }
 
 export default App;
