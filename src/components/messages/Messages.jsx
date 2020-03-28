@@ -1,6 +1,7 @@
 import React, {createRef} from "react";
 import s from "./messages.module.css"
 import {NavLink} from "react-router-dom";
+import {addMessageActionCreator, updateMessageTextActionCreator} from "../../redux/state";
 
 const MsgUser = (props) => {
 
@@ -31,16 +32,15 @@ const Messages = (props) => {
 
     let newMessageElement = createRef();
 
-    let sendMessage = () => {
 
-        let text = newMessageElement.current.value;
-        props.dispatch({type: "ADD_MESSAGE", newMessage: text});
-        // props.addMessage(text);
+
+    let sendMessage = () => {
+        props.dispatch(addMessageActionCreator());
     };
 
     let updateText = () => {
         let text = newMessageElement.current.value;
-        props.dispatch({type: "UPDATE_MESSAGE_TEXT", newMessage: text});
+        props.dispatch(updateMessageTextActionCreator(text));
     };
 
     return (
@@ -61,7 +61,7 @@ const Messages = (props) => {
                     {messagesElements}
                 </div>
                 <div className={s.sendMessage + " " + "whiteBlock"}>
-                    <textarea onChange={updateText} value={props.data.messageText} ref={newMessageElement} name="add_posts" id=""></textarea>
+                    <textarea onChange={updateText} value={props.data.messageText} ref={newMessageElement}></textarea>
                     <button onClick={sendMessage}>SEND</button>
                 </div>
             </div>
