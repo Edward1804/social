@@ -1,7 +1,7 @@
 import React, {createRef} from "react";
 import s from "./messages.module.css"
 import {NavLink} from "react-router-dom";
-import {addMessageActionCreator, updateMessageTextActionCreator} from "../../redux/state";
+import {addMessageActionCreator, updateMessageTextActionCreator} from "../../redux/dialogsReducer";
 
 const MsgUser = (props) => {
 
